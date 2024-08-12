@@ -7,10 +7,10 @@
 #include "Config.h"
 //#include <string>
 
-#define baseOperation 0x7980
+#define baseOperation 0x2250
 
 //#define VARIABLE_NAME L"FastBootOption"
-#define COMMAND_MAGIC baseOperation*0x5478
+#define COMMAND_MAGIC baseOperation *0x1664
 
 #define EFI_VARIABLE_NON_VOLATILE                          0x00000001
 #define EFI_VARIABLE_BOOTSERVICE_ACCESS                    0x00000002

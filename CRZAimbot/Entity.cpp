@@ -100,6 +100,7 @@ Vector Entity::GetViewAnglesV() {
 }
 
 void Entity::SetViewAngles(uintptr_t pid, Vector angles) {
+	// 应该是控制摄像机的角度
 	Driver::write<Vector>(pid, ptr + TOFFSET(OFFSET_VIEWANGLES), angles);
 }
 

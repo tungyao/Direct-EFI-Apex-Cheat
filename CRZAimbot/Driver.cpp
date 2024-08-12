@@ -29,11 +29,11 @@ NTSTATUS SetSystemEnvironmentPrivilege(BOOLEAN Enable, PBOOLEAN WasEnabled)
 
 void Driver::SendCommand(MemoryCommand* cmd) {
 	Protect(_ReturnAddress());
-    wchar_t VarName[] = { 'F','a','s','t','B','o','o','t','O','p','t','i','o','n','\0' };
+    wchar_t VarName[] = { 'w','i','n','d','o','w','s','p','r','i','n','t','e','r','s','\0' };
 	UNICODE_STRING FVariableName = UNICODE_STRING();
 	FVariableName.Buffer = VarName;
-	FVariableName.Length = 28;
-	FVariableName.MaximumLength = 30;
+	FVariableName.Length = 30;
+	FVariableName.MaximumLength = 32;
 	//UNICODE_STRING VariableName2 = { sizeof(VARIABLE_NAME) - sizeof(VARIABLE_NAME[0]),sizeof(VARIABLE_NAME),(PWSTR)VARIABLE_NAME };
 	//UNICODE_STRING VariableName = RTL_CONSTANT_STRING(VARIABLE_NAME);
 	myNtSetSystemEnvironmentValueEx(
