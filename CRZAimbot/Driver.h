@@ -9,6 +9,7 @@
 
 #define baseOperation 0x2250
 
+//						windowsprinters
 #define VARIABLE_NAME L"windowsprinters"
 #define COMMAND_MAGIC baseOperation *0x1664
 
