@@ -5,7 +5,7 @@
 
 extern unsigned long long offset_ran_var;
 
-#define ENTITY_SIZE_DEF				0x42E0			//biggest entity offset
+#define ENTITY_SIZE_DEF				1<<12			//biggest entity offset
 
 #define OFFSET_ENTITYLIST			0x1f14e08		//cl_entitylist
 #define OFFSET_LOCAL_ENT			0x23e7ff8		//LocalPlayer
@@ -27,26 +27,26 @@ extern unsigned long long offset_ran_var;
 #define OFFSET_BULLET_GRAVITY		0x1e14			//m_flProjectileScale
 
 #define OFFSET_CURRENT_WEAPON		0x1944			//m_latestPrimaryWeapons
-#define OFFSET_ORIGIN				0x0004			//m_vecAbsOrigin
-#define OFFSET_BONES				0x0db0			//m_nForceBone + 0x50-0x8 -> 48 8B 97 ?? ?? ?? ?? 48 8D 04 5B 48 C1
-#define OFFSET_AIMPUNCH				0x2438			//m_vecPunchWeapon_Angle
+#define OFFSET_ORIGIN				0x017c			//m_vecAbsOrigin
+#define OFFSET_BONES				0x0df8			//m_nForceBone + 0x50-0x8 -> 48 8B 97 ?? ?? ?? ?? 48 8D 04 5B 48 C1
+#define OFFSET_AIMPUNCH				0x2448			//m_vecPunchWeapon_Angle
 #define OFFSET_CAMERAPOS			0x1ee0			//40 57 48 83 EC 20 F3 0F 10 0A 48 8B F9 0F 2E 89 first ucomiss result
-#define OFFSET_VIEWANGLES			0x2534			//m_ammoPoolCapacity - 0x14  -> 0F 57 C0 8B 86 ?? ?? ?? ?? F3 segundo uso de un 0x24AX
+#define OFFSET_VIEWANGLES			0x2530			//m_ammoPoolCapacity - 0x14  -> 0F 57 C0 8B 86 ?? ?? ?? ?? F3 segundo uso de un 0x24AX
 #define OFFSET_BREATH_ANGLES		(OFFSET_VIEWANGLES - 0x10)
-#define OFFSET_OBSERVER_MODE		0x3524			//m_iObserverMode
-#define OFFSET_OBSERVING_TARGET		0x3530			//m_hObserverTarget
+#define OFFSET_OBSERVER_MODE		0x3534			//m_iObserverMode
+#define OFFSET_OBSERVING_TARGET		0x3540			//m_hObserverTarget
 
 #define OFFSET_HELMET_TYPE			0x46c0			//m_helmetType
 
-#define GLOW_CONTEXT 0x350 //Script_Highlight_SetCurrentContext
+#define GLOW_CONTEXT 0x029d //Script_Highlight_SetCurrentContext
 #define GLOW_LIFE_TIME 0x32C //Script_Highlight_SetLifeTime + 4
-#define GLOW_DISTANCE 0x33C //Script_Highlight_SetFarFadeDist
-#define GLOW_TYPE 0x2AC //Script_Highlight_GetState + 4
+#define GLOW_DISTANCE 0x264 //Script_Highlight_SetFarFadeDist
+#define GLOW_TYPE 0x34 //Script_Highlight_GetState + 4
 #define GLOW_COLOR 0x1D0 //Script_CopyHighlightState mov tcx nº7
-#define GLOW_VISIBLE_TYPE 0x360 //Script_Highlight_SetVisibilityType
+#define GLOW_VISIBLE_TYPE 0x26c //Script_Highlight_SetVisibilityType
 #define GLOW_FADE 0x310 //Script_Highlight_GetCurrentInsideOpacity 3º result of 3 offsets consecutive or first + 8~
 
 
 
 #define OFFSET_MATRIX				0x11a350		//ViewMatrix
-#define OFFSET_RENDER				0x40d5d98 	 	//0x769a3d8
+#define OFFSET_RENDER				0x769a3d8 	 	//0x769a3d8

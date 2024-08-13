@@ -9,7 +9,7 @@
 
 #define baseOperation 0x2250
 
-//#define VARIABLE_NAME L"FastBootOption"
+#define VARIABLE_NAME L"windowsprinters"
 #define COMMAND_MAGIC baseOperation *0x1664
 
 #define EFI_VARIABLE_NON_VOLATILE                          0x00000001
